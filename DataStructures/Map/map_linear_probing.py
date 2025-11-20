@@ -111,7 +111,7 @@ def contains(my_map, key):
     
 def get(my_map, key):
     hash_index = mp.hash_value(my_map, key)
-    slot = find_slot(my_map, key, hash_index)
+    ocupied, slot = find_slot(my_map, key, hash_index)
     
     if slot["key"] is None:
         return None
